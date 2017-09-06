@@ -8,12 +8,11 @@ import processing.sound.*;
 import processing.serial.*;
 
 
-// PORT sieht man in der Konsole. muss irgendwas mit wchusbserial sein
+// PORT sieht man in der Konsole. muss irgendwas mit tty.usbmodem sein
 int port=4;
 
 // The serial port:
 Serial myPort;
-
 
 
 float volume=0;
