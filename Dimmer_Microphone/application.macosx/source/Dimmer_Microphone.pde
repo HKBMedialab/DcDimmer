@@ -8,16 +8,11 @@ import processing.sound.*;
 import processing.serial.*;
 
 
-// PORT sieht man in der Konsole. muss irgendwas mit wchusbserial sein
-int port=4;
+float volume=0;
+float drag=0.01;
 
 // The serial port:
 Serial myPort;
-
-
-
-float volume=0;
-float drag=0.01;
 
 AudioIn input;
 Amplitude analyzer;
@@ -28,7 +23,7 @@ void setup() {
   printArray(Serial.list());
 
   // Open the usbmodem tty port from the list in the console
-  myPort = new Serial(this, Serial.list()[port], 9600);
+  myPort = new Serial(this, Serial.list()[3], 9600);
 
   // Start listening to the microphone
   // Create an Audio input and grab the 1st channel
